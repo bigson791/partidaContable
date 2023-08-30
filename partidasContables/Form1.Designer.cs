@@ -40,8 +40,10 @@
             lblTipo = new Label();
             cmbTipoCuenta = new ComboBox();
             label4 = new Label();
-            label5 = new Label();
             btnGuardar = new Button();
+            lblMesOp = new Label();
+            label6 = new Label();
+            lblEstadoOp = new Label();
             SuspendLayout();
             // 
             // label1
@@ -80,7 +82,7 @@
             // 
             lblMesOperacion.AutoSize = true;
             lblMesOperacion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblMesOperacion.Location = new Point(216, 22);
+            lblMesOperacion.Location = new Point(217, 22);
             lblMesOperacion.Name = "lblMesOperacion";
             lblMesOperacion.Size = new Size(42, 21);
             lblMesOperacion.TabIndex = 3;
@@ -102,7 +104,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(47, 112);
+            label2.Location = new Point(47, 125);
             label2.Name = "label2";
             label2.Size = new Size(59, 21);
             label2.TabIndex = 5;
@@ -111,7 +113,7 @@
             // txtNumeroCuenta
             // 
             txtNumeroCuenta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNumeroCuenta.Location = new Point(154, 109);
+            txtNumeroCuenta.Location = new Point(154, 122);
             txtNumeroCuenta.Name = "txtNumeroCuenta";
             txtNumeroCuenta.Size = new Size(433, 29);
             txtNumeroCuenta.TabIndex = 6;
@@ -120,7 +122,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(47, 157);
+            label3.Location = new Point(50, 171);
             label3.Name = "label3";
             label3.Size = new Size(56, 21);
             label3.TabIndex = 7;
@@ -129,7 +131,7 @@
             // txtMonto
             // 
             txtMonto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMonto.Location = new Point(154, 157);
+            txtMonto.Location = new Point(154, 171);
             txtMonto.Name = "txtMonto";
             txtMonto.Size = new Size(433, 29);
             txtMonto.TabIndex = 8;
@@ -138,7 +140,7 @@
             // 
             lblTipo.AutoSize = true;
             lblTipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTipo.Location = new Point(47, 203);
+            lblTipo.Location = new Point(47, 226);
             lblTipo.Name = "lblTipo";
             lblTipo.Size = new Size(93, 21);
             lblTipo.TabIndex = 9;
@@ -148,7 +150,8 @@
             // 
             cmbTipoCuenta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cmbTipoCuenta.FormattingEnabled = true;
-            cmbTipoCuenta.Location = new Point(157, 201);
+            cmbTipoCuenta.Items.AddRange(new object[] { "DEBE", "HABER" });
+            cmbTipoCuenta.Location = new Point(155, 223);
             cmbTipoCuenta.Name = "cmbTipoCuenta";
             cmbTipoCuenta.Size = new Size(430, 29);
             cmbTipoCuenta.TabIndex = 10;
@@ -163,36 +166,62 @@
             label4.TabIndex = 11;
             label4.Text = "Estado:";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(47, 250);
-            label5.Name = "label5";
-            label5.Size = new Size(93, 21);
-            label5.TabIndex = 12;
-            label5.Text = "Tipo Cuenta";
-            // 
             // btnGuardar
             // 
             btnGuardar.BackColor = SystemColors.MenuHighlight;
             btnGuardar.FlatAppearance.BorderColor = Color.MintCream;
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnGuardar.ForeColor = SystemColors.ButtonHighlight;
-            btnGuardar.Location = new Point(450, 283);
+            btnGuardar.Location = new Point(443, 292);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(137, 33);
+            btnGuardar.Size = new Size(147, 41);
             btnGuardar.TabIndex = 13;
             btnGuardar.Text = "GuardarPartida";
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // lblMesOp
+            // 
+            lblMesOp.AutoSize = true;
+            lblMesOp.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMesOp.ForeColor = Color.Teal;
+            lblMesOp.Location = new Point(259, 23);
+            lblMesOp.Name = "lblMesOp";
+            lblMesOp.Size = new Size(73, 21);
+            lblMesOp.TabIndex = 14;
+            lblMesOp.Text = "AGOSTO";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.Teal;
+            label6.Location = new Point(380, 23);
+            label6.Name = "label6";
+            label6.Size = new Size(46, 21);
+            label6.TabIndex = 15;
+            label6.Text = "2023";
+            // 
+            // lblEstadoOp
+            // 
+            lblEstadoOp.AutoSize = true;
+            lblEstadoOp.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblEstadoOp.ForeColor = Color.FromArgb(0, 192, 0);
+            lblEstadoOp.Location = new Point(509, 23);
+            lblEstadoOp.Name = "lblEstadoOp";
+            lblEstadoOp.Size = new Size(75, 21);
+            lblEstadoOp.TabIndex = 16;
+            lblEstadoOp.Text = "ABIERTO";
             // 
             // formularioPartida
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(627, 356);
+            Controls.Add(lblEstadoOp);
+            Controls.Add(label6);
+            Controls.Add(lblMesOp);
             Controls.Add(btnGuardar);
-            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(cmbTipoCuenta);
             Controls.Add(lblTipo);
@@ -226,7 +255,9 @@
         private Label lblTipo;
         private ComboBox cmbTipoCuenta;
         private Label label4;
-        private Label label5;
         private Button btnGuardar;
+        private Label lblMesOp;
+        private Label label6;
+        private Label lblEstadoOp;
     }
 }
