@@ -33,8 +33,9 @@ namespace partidasContables
             String cuenta = txtNumeroCuenta.Text;
             String cantidad = txtMonto.Text;
             String tipoCuenta = cmbTipoCuenta.Text;
+            String descripcion = txtDescripcion.Text;
 
-            if (fecha == "" || cuenta == "" || cantidad == "" || tipoCuenta == "")
+            if (fecha == "" || cuenta == "" || cantidad == "" || tipoCuenta == "" || descripcion == "")
             {
                 if (fecha == "")
                 {
@@ -56,20 +57,27 @@ namespace partidasContables
                     MessageBox.Show("Ingresa el tipo de operación");
                     cmbTipoCuenta.Focus();
                 }
-                if (tipoCuenta == "DEBE" || tipoCuenta == "HABER")
+                else if (tipoCuenta == "DEBE" || tipoCuenta == "HABER")
                 {
-                    
+
                 }
-                else {
+                else
+                {
                     MessageBox.Show("Selecciona un tipo de operación correcta");
                     cmbTipoCuenta.Focus();
                 }
+                if (descripcion == "")
+                {
+                    MessageBox.Show(" Debes Ingresar la descripción");
+                    txtDescripcion.Focus();
+                }
             }
-            else {
-                MessageBox.Show(fecha + cuenta + cantidad + tipoCuenta);
+            else
+            {
+                MessageBox.Show(fecha + cuenta + cantidad + tipoCuenta + descripcion);
             }
 
-            
+
         }
     }
 }

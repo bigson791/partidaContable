@@ -44,6 +44,8 @@
             lblMesOp = new Label();
             label6 = new Label();
             lblEstadoOp = new Label();
+            txtDescripcion = new TextBox();
+            lblDescripcion = new Label();
             SuspendLayout();
             // 
             // label1
@@ -172,7 +174,7 @@
             btnGuardar.FlatAppearance.BorderColor = Color.MintCream;
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnGuardar.ForeColor = SystemColors.ButtonHighlight;
-            btnGuardar.Location = new Point(443, 292);
+            btnGuardar.Location = new Point(438, 372);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(147, 41);
             btnGuardar.TabIndex = 13;
@@ -213,11 +215,31 @@
             lblEstadoOp.TabIndex = 16;
             lblEstadoOp.Text = "ABIERTO";
             // 
+            // txtDescripcion
+            // 
+            txtDescripcion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDescripcion.Location = new Point(154, 274);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(433, 29);
+            txtDescripcion.TabIndex = 18;
+            // 
+            // lblDescripcion
+            // 
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDescripcion.Location = new Point(50, 274);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(91, 21);
+            lblDescripcion.TabIndex = 17;
+            lblDescripcion.Text = "Descripción";
+            // 
             // formularioPartida
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(627, 356);
+            ClientSize = new Size(627, 465);
+            Controls.Add(txtDescripcion);
+            Controls.Add(lblDescripcion);
             Controls.Add(lblEstadoOp);
             Controls.Add(label6);
             Controls.Add(lblMesOp);
@@ -259,5 +281,7 @@
         private Label lblMesOp;
         private Label label6;
         private Label lblEstadoOp;
+        private TextBox txtDescripcion;
+        private Label lblDescripcion;
     }
 }
