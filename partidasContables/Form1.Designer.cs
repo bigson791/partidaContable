@@ -52,7 +52,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(47, 75);
+            label1.Location = new Point(47, 85);
             label1.Name = "label1";
             label1.Size = new Size(102, 21);
             label1.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             lblOperacion.AutoSize = true;
             lblOperacion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblOperacion.Location = new Point(47, 22);
+            lblOperacion.Location = new Point(47, 25);
             lblOperacion.Name = "lblOperacion";
             lblOperacion.Size = new Size(163, 21);
             lblOperacion.TabIndex = 1;
@@ -74,7 +74,7 @@
             fechaPartida.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             fechaPartida.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             fechaPartida.Format = DateTimePickerFormat.Short;
-            fechaPartida.Location = new Point(155, 74);
+            fechaPartida.Location = new Point(155, 84);
             fechaPartida.Name = "fechaPartida";
             fechaPartida.RightToLeft = RightToLeft.No;
             fechaPartida.Size = new Size(432, 29);
@@ -84,7 +84,7 @@
             // 
             lblMesOperacion.AutoSize = true;
             lblMesOperacion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblMesOperacion.Location = new Point(217, 22);
+            lblMesOperacion.Location = new Point(217, 25);
             lblMesOperacion.Name = "lblMesOperacion";
             lblMesOperacion.Size = new Size(42, 21);
             lblMesOperacion.TabIndex = 3;
@@ -95,7 +95,7 @@
             // 
             lblAnioOperacion.AutoSize = true;
             lblAnioOperacion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblAnioOperacion.Location = new Point(336, 23);
+            lblAnioOperacion.Location = new Point(336, 26);
             lblAnioOperacion.Name = "lblAnioOperacion";
             lblAnioOperacion.Size = new Size(41, 21);
             lblAnioOperacion.TabIndex = 4;
@@ -106,7 +106,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(47, 125);
+            label2.Location = new Point(47, 142);
             label2.Name = "label2";
             label2.Size = new Size(59, 21);
             label2.TabIndex = 5;
@@ -115,16 +115,17 @@
             // txtNumeroCuenta
             // 
             txtNumeroCuenta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNumeroCuenta.Location = new Point(154, 122);
+            txtNumeroCuenta.Location = new Point(154, 138);
             txtNumeroCuenta.Name = "txtNumeroCuenta";
             txtNumeroCuenta.Size = new Size(433, 29);
             txtNumeroCuenta.TabIndex = 6;
+            txtNumeroCuenta.KeyPress += txtNumeroCuenta_KeyPress;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(50, 171);
+            label3.Location = new Point(50, 194);
             label3.Name = "label3";
             label3.Size = new Size(56, 21);
             label3.TabIndex = 7;
@@ -133,16 +134,17 @@
             // txtMonto
             // 
             txtMonto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMonto.Location = new Point(154, 171);
+            txtMonto.Location = new Point(154, 194);
             txtMonto.Name = "txtMonto";
             txtMonto.Size = new Size(433, 29);
             txtMonto.TabIndex = 8;
+            txtMonto.KeyPress += txtMonto_KeyPress;
             // 
             // lblTipo
             // 
             lblTipo.AutoSize = true;
             lblTipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTipo.Location = new Point(47, 226);
+            lblTipo.Location = new Point(47, 256);
             lblTipo.Name = "lblTipo";
             lblTipo.Size = new Size(93, 21);
             lblTipo.TabIndex = 9;
@@ -153,7 +155,7 @@
             cmbTipoCuenta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cmbTipoCuenta.FormattingEnabled = true;
             cmbTipoCuenta.Items.AddRange(new object[] { "DEBE", "HABER" });
-            cmbTipoCuenta.Location = new Point(155, 223);
+            cmbTipoCuenta.Location = new Point(155, 253);
             cmbTipoCuenta.Name = "cmbTipoCuenta";
             cmbTipoCuenta.Size = new Size(430, 29);
             cmbTipoCuenta.TabIndex = 10;
@@ -162,7 +164,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(444, 23);
+            label4.Location = new Point(444, 26);
             label4.Name = "label4";
             label4.Size = new Size(59, 21);
             label4.TabIndex = 11;
@@ -174,9 +176,9 @@
             btnGuardar.FlatAppearance.BorderColor = Color.MintCream;
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnGuardar.ForeColor = SystemColors.ButtonHighlight;
-            btnGuardar.Location = new Point(438, 372);
+            btnGuardar.Location = new Point(438, 422);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(147, 41);
+            btnGuardar.Size = new Size(147, 46);
             btnGuardar.TabIndex = 13;
             btnGuardar.Text = "GuardarPartida";
             btnGuardar.UseVisualStyleBackColor = false;
@@ -187,7 +189,7 @@
             lblMesOp.AutoSize = true;
             lblMesOp.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblMesOp.ForeColor = Color.Teal;
-            lblMesOp.Location = new Point(259, 23);
+            lblMesOp.Location = new Point(259, 26);
             lblMesOp.Name = "lblMesOp";
             lblMesOp.Size = new Size(73, 21);
             lblMesOp.TabIndex = 14;
@@ -198,7 +200,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.Teal;
-            label6.Location = new Point(380, 23);
+            label6.Location = new Point(380, 26);
             label6.Name = "label6";
             label6.Size = new Size(46, 21);
             label6.TabIndex = 15;
@@ -209,7 +211,7 @@
             lblEstadoOp.AutoSize = true;
             lblEstadoOp.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblEstadoOp.ForeColor = Color.FromArgb(0, 192, 0);
-            lblEstadoOp.Location = new Point(509, 23);
+            lblEstadoOp.Location = new Point(509, 26);
             lblEstadoOp.Name = "lblEstadoOp";
             lblEstadoOp.Size = new Size(75, 21);
             lblEstadoOp.TabIndex = 16;
@@ -218,7 +220,7 @@
             // txtDescripcion
             // 
             txtDescripcion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDescripcion.Location = new Point(154, 274);
+            txtDescripcion.Location = new Point(154, 311);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.Size = new Size(433, 29);
             txtDescripcion.TabIndex = 18;
@@ -227,7 +229,7 @@
             // 
             lblDescripcion.AutoSize = true;
             lblDescripcion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDescripcion.Location = new Point(50, 274);
+            lblDescripcion.Location = new Point(50, 311);
             lblDescripcion.Name = "lblDescripcion";
             lblDescripcion.Size = new Size(91, 21);
             lblDescripcion.TabIndex = 17;
@@ -235,9 +237,9 @@
             // 
             // formularioPartida
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(627, 465);
+            ClientSize = new Size(627, 527);
             Controls.Add(txtDescripcion);
             Controls.Add(lblDescripcion);
             Controls.Add(lblEstadoOp);
