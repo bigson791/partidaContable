@@ -180,9 +180,15 @@
             btnGuardar.FlatAppearance.BorderColor = Color.MintCream;
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnGuardar.ForeColor = SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             btnGuardar.Location = new Point(468, 368);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(262, 46);
+=======
+            btnGuardar.Location = new Point(438, 422);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(147, 46);
+>>>>>>> 5fc36d662ee8d2703bd16d09729513446805a1e8
             btnGuardar.TabIndex = 13;
             btnGuardar.Text = "GuardarPartida";
             btnGuardar.UseVisualStyleBackColor = false;
@@ -201,6 +207,7 @@
             // 
             // lblAnioOp
             // 
+<<<<<<< HEAD
             lblAnioOp.AutoSize = true;
             lblAnioOp.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblAnioOp.ForeColor = Color.Teal;
@@ -209,6 +216,16 @@
             lblAnioOp.Size = new Size(46, 21);
             lblAnioOp.TabIndex = 15;
             lblAnioOp.Text = "2023";
+=======
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.Teal;
+            label6.Location = new Point(380, 26);
+            label6.Name = "label6";
+            label6.Size = new Size(46, 21);
+            label6.TabIndex = 15;
+            label6.Text = "2023";
+>>>>>>> 5fc36d662ee8d2703bd16d09729513446805a1e8
             // 
             // lblEstadoOp
             // 
@@ -261,8 +278,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+<<<<<<< HEAD
             ClientSize = new Size(772, 769);
             Controls.Add(panel1);
+=======
+            ClientSize = new Size(627, 527);
+>>>>>>> 5fc36d662ee8d2703bd16d09729513446805a1e8
             Controls.Add(txtDescripcion);
             Controls.Add(lblDescripcion);
             Controls.Add(lblEstadoOp);

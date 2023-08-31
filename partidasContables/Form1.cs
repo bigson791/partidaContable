@@ -2,6 +2,7 @@ namespace partidasContables
 {
     public partial class formularioPartida : Form
     {
+<<<<<<< HEAD
         int correlativo = 0;
         struct CuentaContable
         {
@@ -16,6 +17,8 @@ namespace partidasContables
             new CuentaContable { NumeroCuenta = 654321, NombreCuenta = "PAPELERIA Y UTILES", EstadoCuenta = "ACTIVO"},
             new CuentaContable { NumeroCuenta = 111111, NombreCuenta = "ATENCION AL PERSONAL", EstadoCuenta = "INACTIVO"},
         };
+=======
+>>>>>>> 5fc36d662ee8d2703bd16d09729513446805a1e8
         struct Mes
         {
             public int Numero { get; set; }
@@ -37,6 +40,7 @@ namespace partidasContables
             new Mes { Numero = 11, Nombre = "Noviembre" },
             new Mes { Numero = 12, Nombre = "Diciembre" }
         };
+<<<<<<< HEAD
 
         struct Partida
         {
@@ -54,6 +58,11 @@ namespace partidasContables
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+=======
+        public formularioPartida()
+        {
+            InitializeComponent();
+>>>>>>> 5fc36d662ee8d2703bd16d09729513446805a1e8
             if (lblEstadoOp.Text == "CERRADO")
             {
 
@@ -95,12 +104,18 @@ namespace partidasContables
             String tipoCuenta = cmbTipoCuenta.Text;
             String descripcion = txtDescripcion.Text;
 
+<<<<<<< HEAD
             int cuentaCT = int.Parse(txtNumeroCuenta.Text);
             decimal montoPartida = decimal.Parse(txtMonto.Text);
 
 
 
             if (fecha == "" || cuenta == "" || cantidad == "" || tipoCuenta == "" || descripcion == "")
+=======
+
+
+            if (fecha == "" || cuenta == "" || cantidad =="" || tipoCuenta == "" || descripcion == "")
+>>>>>>> 5fc36d662ee8d2703bd16d09729513446805a1e8
             {
                 if (fecha == "")
                 {
@@ -139,6 +154,7 @@ namespace partidasContables
             }
             else
             {
+<<<<<<< HEAD
                 if (ObtenerEstadoCuenta(Int32.Parse(cuenta)) == "ACTIVO")
                 {
                     if (validaEstadoMes())
@@ -178,14 +194,49 @@ namespace partidasContables
 
                     }
 
+=======
+                if (validaEstadoMes())
+                {
+                    MessageBox.Show("El mes esta activo");
+                    MessageBox.Show(fecha + cuenta + cantidad + tipoCuenta + descripcion);
+                    int anio = ExtraerAniodeFecha(fecha);
+                    int mes = ExtraerMesdeFecha(fecha);
+
+                    String mesDigitado = ObtenerNombreMes(mes).ToUpper();
+
+                    if (mesDigitado == lblMesOp.Text)
+                    {
+                        MessageBox.Show("Estas dentro del mes");
+
+                    }
+                    else {
+                        MessageBox.Show("Estas tratando de ingresar información en un mes diferente"+
+                            ", el mes del periodo es: "+lblMesOp.Text);
+                    }
+
+                    MessageBox.Show("El mes que estas digitando es: "+mesDigitado);
+>>>>>>> 5fc36d662ee8d2703bd16d09729513446805a1e8
 
                 }
                 else
                 {
+<<<<<<< HEAD
                     MessageBox.Show("El número de cuenta: " + cuenta + ", esta inactivo");
                 }
 
 
+=======
+                    MessageBox.Show("El mes esta cerrado, comuniquese al departamento de informatica");
+
+                    fechaPartida.Enabled = false;
+                    txtNumeroCuenta.Enabled = false;
+                    txtMonto.Enabled = false;
+                    cmbTipoCuenta.Enabled = false;
+                    txtDescripcion.Enabled = false;
+
+                }
+
+>>>>>>> 5fc36d662ee8d2703bd16d09729513446805a1e8
             }
 
 
@@ -242,7 +293,11 @@ namespace partidasContables
 
         private void validarMes(String fecha)
         {
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 5fc36d662ee8d2703bd16d09729513446805a1e8
 
         }
 
@@ -298,6 +353,7 @@ namespace partidasContables
             return "Mes no encontrado";
         }
 
+<<<<<<< HEAD
         private string ObtenerEstadoCuenta(int accountNumber)
         {
             foreach (CuentaContable cuenta in ct)
@@ -352,5 +408,7 @@ namespace partidasContables
         }
 
 
+=======
+>>>>>>> 5fc36d662ee8d2703bd16d09729513446805a1e8
     }
 }
